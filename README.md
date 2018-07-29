@@ -23,7 +23,24 @@ optional arguments:
 
 ## Example
 
+run:
+
 ```
 python main.py  -c  "while [ 1 -eq 1 ]; do echo 2; sleep 1; done" -p "/Users/ruifengyun/github/"
 ```
 
+stdout:
+
+```
+2018-07-29 10:32:35 - Executing `while [ 1 -eq 1 ]; do echo 2018年 7月29日 星期日 10时32分35秒 CST; sleep 1; done`
+2018年 7月29日 星期日 10时32分35秒 CST
+2018年 7月29日 星期日 10时32分35秒 CST
+2018年 7月29日 星期日 10时32分35秒 CST
+2018-07-29 10:32:41 - Modified directory: /Users/ruifengyun/github/watchrun/.git
+2018-07-29 10:32:41 - Terminated (return code: -15)
+2018-07-29 10:32:41 - Restarting `while [ 1 -eq 1 ]; do echo 2018年 7月29日 星期日 10时32分35秒 CST; sleep 1; done`
+2018年 7月29日 星期日 10时32分35秒 CST
+2018-07-29 10:32:41 - Modified directory: /Users/ruifengyun/github/watchrun/.git
+2018-07-29 10:32:41 - Restarting `while [ 1 -eq 1 ]; do echo 2018年 7月29日 星期日 10时32分35秒 CST; sleep 1; done`
+2018-07-29 10:32:41 - Terminated (return code: -15)
+```
