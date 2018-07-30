@@ -9,8 +9,8 @@ import argparse
 import coloredlogs
 from watchdog.observers import Observer
 
-from src.executor import Executor
-from src.monitor import Monitor
+from watchrun.executor import Executor
+from watchrun.monitor import Monitor
 
 
 log_level = logging.DEBUG
@@ -28,7 +28,7 @@ parser.add_argument('-c', '--command', required=True, dest='command',
 args = parser.parse_args()
 
 
-if __name__ == "__main__":
+def main():
     coloredlogs.install(level=log_level,
                         fmt='%(asctime)s - %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
@@ -48,3 +48,7 @@ if __name__ == "__main__":
 
     observer.join()
     logging.debug("Exiting...")
+
+
+if __name__ == "__main__":
+    main()
